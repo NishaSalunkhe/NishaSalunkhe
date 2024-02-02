@@ -1,0 +1,543 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+ 
+  
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+#cursor{
+    height: 10px;
+    width: 10px;
+    background: rgb(136, 253, 12);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 190px;
+    width: 190px;
+    background:  rgba(176, 242, 61, 0.29);
+    border-radius: 50%;
+    position: fixed;
+    filter:blur(40px);
+    z-index: 9;
+   
+}
+#nav{
+    justify-content: space-around;
+    height: 145px;
+    width: 100%;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    padding: 0 60px;
+    gap:80px;
+   position: fixed; 
+   /* puri website me nav saath hai */
+   z-index: 99;
+   /* (99)element with z-index: 99 will be visually positioned above elements with lower z-index values on the same stacking context. */
+    /* (-1) Negative z-index values are often used to position elements behind their parent containers or other elements on the page. */
+}
+#nav h4:hover{
+    padding: 20px;
+    border-radius: 10px;
+    background: #c003c6;
+}
+
+#nav img{
+    height:70px;
+}
+#nav a{
+    text-decoration: none;
+}
+video{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    object-fit: cover;
+    position: fixed;  
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#page1{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+  font-weight:900;
+  font-size: 68px;
+  position: relative;
+}
+#page1 h1::before{
+    content: "INNOVATE. INSPIRE. ITERATE.";
+    position: absolute;
+    color: rgb(3, 3, 3);
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 1px rgb(10, 13, 11);
+    z-index:-1;
+
+}
+#page1 h2{
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: 600;
+    
+
+}
+#page1 p{
+    font-size: 16px;
+  font-weight: 300;
+  width: 50%;
+
+}
+/* ********************************** Page 2 ************************************************** */
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display:inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 22s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+#scroller h6{
+    font-family: 'Poppins ';
+    display:inline-block;
+    font-size: 70px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgb(168, 183, 8);
+    transition: all linear 0.5s;
+    z-index: 9;
+}
+#scroller h6:hover{
+    color: rgb(240, 214, 12);
+}
+@keyframes scroll{
+    from{
+        transform : translateX(0);
+    }
+    to{
+        transform : translateX(-100%);
+
+    }
+}
+
+/* -------------About--------------------------------------- */
+
+#abt{
+    /* background: red; */
+    margin-top: 100px;
+    position:relative;
+    z-index: 10;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    transition: ;
+
+}
+#abt img{
+    height: 220px;
+    width: 180px;
+    border-radius:20px;
+    object-fit: cover;
+}
+#abt-ct{
+    width: 60%;
+    text-align: center;
+   
+
+}
+#abt-ct h3{
+    font-size:45px ;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+#abt-ct p{
+    font-size: 17px;
+    font-weight:100;
+    line-height: 28px;
+}
+
+#abt-ct h4{
+    margin-top:40px;
+    font-weight:200;
+    font-size: xx-large;
+    font-family: 'Dancing Script';   
+}
+
+/* ------------------Cards----------------------------- */
+
+#cards-container{
+    /* background: yellow; */
+    margin-top:230px;
+    margin-bottom:230px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position:relative;
+    z-index: 10;
+}
+
+    
+#cc{
+    background: #000000;
+    padding: 50px;
+    font-size: 50px;   
+}
+
+#cc h4{
+    font-weight:200;
+    font-size: xx-large;
+    color: white;
+}
+
+#cc img{
+    margin-top: 0;
+    height:150px;
+    width: 80%;
+    padding: 20px 0;   
+}
+
+.card{
+    height: 65%;
+    width: 20%;
+    background-color: blueviolet;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s ;
+    z-index: 8;
+}
+
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+
+#c1{
+    background-image: url(https://wallpapercave.com/wp/wp2742499.jpg);
+}
+#c2{
+    background-image: url(https://wallpaperbat.com/img/426798-its-almost-1000-days-are-you-using-arrow-functions.jpg);
+}
+#c3{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/645/96/47/python-programming-programming-programming-language-code-hd-wallpaper-preview.jpg);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    padding:30px;
+    padding-top: 100px;
+    opacity:0;
+    transition: all ease 0.6s ;
+
+}
+#c1 .overlay{
+    background-color:rgb(14, 135, 234);
+}
+#c2 .overlay{
+    background-color:rgb(241, 107, 17);
+}
+#c3 .overlay{
+    background-color: rgb(246, 236, 35);
+}
+.card:hover .overlay{
+    opacity:1;
+
+}
+.overlay h4{
+    color:#000;
+    font-size: 30px;
+    font-weight:900;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}  
+.overlay p{
+    color:#000;
+    font-weight:800;
+    font-size: 15px;
+}
+
+/* -------------------Green- Div------------- */
+
+#green-div{
+    margin-top: 10px;
+    margin-bottom:220px;
+    height: 30vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#green-div img{
+    height:100%;
+    object-fit: cover;
+    width: 14%;
+}
+#green-div h4{
+    width: 50%;
+    font-size: 22px;
+    font-weight: 100;
+    /* text-transform:; */
+
+}
+/* ********************************** Page 3 ************************************************** */
+
+/* -----------------------Projects------------------ */
+
+#page3{
+    min-height: 50vh;
+    width: 100%;
+    z-index: 10;
+
+}
+
+
+#project-container{
+    margin-top:20px;
+    margin-bottom:20px;
+    height: 60vh;
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position:relative;
+    z-index: 10;
+
+}
+.project{
+    height: 60%;
+    width: 20%;
+    /* background-color: blueviolet; */
+    border-radius: 49%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    transition: all ease 0.6s ;
+}
+.project:hover{
+    transform: rotate3d(1,1,0,20deg);
+ }
+#p1{
+   background-image: url(https://e1.pxfuel.com/desktop-wallpaper/197/848/desktop-wallpaper-born-shy-on-backgrounds-black-iphone-cute.jpg); 
+}
+
+#p2{
+   background-image: url(https://cutewallpaper.org/27/black-minimalist-hd-wallpaper/279442506.jpg); 
+}
+
+#p3{
+    background-image: url(https://e0.pxfuel.com/wallpapers/323/307/desktop-wallpaper-iphone-aesthetic-object.jpg);
+}
+#p1 .overlay{
+    background-color:rgb(101, 121, 148);
+}
+#p2 .overlay{
+    background-color:rgb(101, 167, 98);
+}
+#p3 .overlay{
+    background-color: rgb(224, 147, 187);
+}
+.project:hover .overlay{
+    opacity:1;
+
+}
+.overlay h4{
+    color:#000;
+    font-size: 30px;
+    font-weight:900;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    
+}  
+
+/* *************** page 4 - resume ************** */
+/* parent */
+#page4{
+    /* margin-top: 30px; */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #de6767; */
+    z-index: 8;
+    margin-bottom: 150px;
+}
+
+/* child */
+#page4 video{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+
+#page4-text{
+    margin-top: 120px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:90px;
+    padding: 20px 0px ;
+  
+}
+
+#page4-text #contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 8;
+    background: #292525;
+    padding: 4vw 6vw;
+    border-radius:30px; 
+}
+
+#contact-container h1{
+    font-size: 40px;
+    color: #ffff;
+}
+#contact-container a:hover{
+          background: purple;
+
+}
+
+#contact-container .btn{
+    
+        display: block;
+        margin: 50px ;
+        /* width: fit-content; */
+        border: 6px solid rgb(71, 67, 72);
+        padding : .8vw 1.7vw;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 900;
+        font-size: 20px;
+     }
+        .btn:hover{
+        background: rgb(54, 160, 1);
+        }
+    .btn{
+        display:inline-block;
+        background-color: rgb(184, 93, 220);
+       }
+
+       #res-img img{
+        height: 280px;
+        
+       }
+      
+       
+       /* -----------------page 5 -------------------- */
+
+       #page5{
+        min-height: 100vh;
+        width: 100%;
+        z-index: 10;
+    }
+#last{
+    margin-top: 300px;
+    height: 20vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#last h4{
+    /* margin-top: 140px; */
+    margin-bottom: 280px;
+    width: 55%;
+    font-size: 28px;
+    margin-left: 27%;
+    font-weight: 500;
+    font-size: 40px;
+    font-family: 'Dancing Script';   
+   
+
+}
+ 
+#icons{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+#icons img{
+    height:28px;
+
+
+}
+#contact-container #icons{
+    margin-top:20px;
+}
+
+
+    
+
+
+
+   
